@@ -40,13 +40,16 @@
 }
 
 body {
-  height: auto;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
   background-image: url('https://img.remediosdigitales.com/0ceb5b/forza-horizon-5-mercedes-amg-one-1/1366_2000.jpeg');
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
   font-family: "montserrat", sans-serif;
   font-weight: 500;
   color: var(--more-more-gray);
@@ -245,4 +248,73 @@ h1 {
 
 .submit-button:active {
   transform: scale(0.85);
+}
+
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+  animation: loader 2s linear forwards;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation-duration: 2s;
+  animation: rotate 1s linear infinite;
+}
+.loader::before , .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #000000;
+  animation: prixClipFix 2s linear infinite ;
+}
+.loader::after{
+  border-color: #FF3D00;
+  animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0%   {transform: rotate(0deg)}
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
 }
