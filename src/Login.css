@@ -1,0 +1,225 @@
+:root {
+  --ligth-green: #4caf50;
+  --green: #2a9235;
+  --more-green: #0a490a;
+  --yellow: #ffc107;
+  --brown: #916400;
+  --white: #e6fbe3;
+  --gray: #dcf1d9;
+  --more-gray: #b4c8b1;
+  --more-more-gray: #333333;
+  --litle-gray: #5c5c5c;
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.06),
+    0.4px 0.6px 0.9px -0.7px hsl(var(--shadow-color) / 0.09),
+    1px 1.2px 2px -1.5px hsl(var(--shadow-color) / 0.11);
+  --shadow-elevation-medium: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.06),
+    0.9px 1.2px 1.9px -0.5px hsl(var(--shadow-color) / 0.08),
+    2.1px 2.7px 4.4px -1px hsl(var(--shadow-color) / 0.11),
+    4.8px 6.2px 10px -1.5px hsl(var(--shadow-color) / 0.13);
+  --shadow-elevation-high: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.07),
+    2.1px 2.7px 4.4px -0.2px hsl(var(--shadow-color) / 0.08),
+    3.9px 5px 8.1px -0.5px hsl(var(--shadow-color) / 0.09),
+    6.3px 8.1px 13.1px -0.7px hsl(var(--shadow-color) / 0.11),
+    10px 12.8px 20.7px -1px hsl(var(--shadow-color) / 0.12),
+    15.7px 20.1px 32.5px -1.2px hsl(var(--shadow-color) / 0.13),
+    23.9px 30.7px 49.6px -1.5px hsl(var(--shadow-color) / 0.14);
+}
+
+body {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--more-gray);
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  color: var(--more-more-gray);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 60%;
+  height: 90%;
+  padding: 2%;
+  background: var(--gray);
+  box-shadow: var(--shadow-elevation-high);
+  border-radius: 10px;
+}
+
+.main-container div {
+  margin: 10px 0 0 0;
+}
+.main-container img {
+  right: 35%;
+  height: 150px;
+  width: 150px;
+  margin: -50px 0 -30px 0;
+}
+
+.header-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-container img {
+  animation: 1s header-img 0.5s ease-in-out;
+}
+@keyframes header-img {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.header-container h1 {
+  animation: 1.5s header-h1 0.5s ease-in-out;
+}
+@keyframes header-h1 {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.main-container .form label {
+  animation: 1.5s container-form 0.1s ease-in-out;
+}
+@keyframes container-form {
+  0% {
+    transform: translateX(-800px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+h1 {
+  letter-spacing: 10px;
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 28px;
+}
+.form {
+  width: 80%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: var(--more-more-gray);
+  padding: 20px 20px 20px 0;
+  border: none;
+  background-color: var(--gray);
+}
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--litle-gray);
+}
+.form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid var(--more-more-gray);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.form input:focus {
+  outline: none;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  left: 0px;
+  color: var(--more-more-gray);
+  font-weight: 700
+  
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+#checkbox + #checkbox-label:hover {
+  cursor: pointer;
+}
+
+.form-down {
+  animation: side-content-text;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes side-content-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.form-down {
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.submit-button {
+  width: 90%;
+  height: 45px;
+  background: var(--brown);
+  border: none;
+  border-radius: 4px;
+}
+.submit-button a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: var(--yellow);
+}
+.submit-button:hover {
+  cursor: pointer;
+  border: solid 2px var(--brown);
+  background: transparent;
+}
+
+.submit-button:active {
+  transform: scale(0.9);
+}
