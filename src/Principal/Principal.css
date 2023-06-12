@@ -80,6 +80,16 @@ img {
   color: var(--white);
 
   background: linear-gradient(rgba(0, 0, 0, 0.39), 100%, transparent);
+
+  animation: 0.8s nav 1.5s ease-in;
+}
+@keyframes nav {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .logo img {
@@ -93,8 +103,8 @@ img {
 }
 
 .nav-container {
-  width: 100%;
-}
+  width: 100%;}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -212,9 +222,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 5;
 
-  animation: loader 0s linear forwards;
+  animation: loader 2s linear forwards;
 }
 @keyframes loader {
   0% {
@@ -328,6 +338,16 @@ footer {
   height: 20px;
   width: 400px;
   margin: 0;
+
+  animation: 1s button 1.8s ease-in-out;
+}
+@keyframes button {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 #background-info {
   background: rgb(0, 0, 0);
@@ -364,7 +384,9 @@ footer {
   border: 2px solid var(--white);
   padding: 10px 30px 10px 30px;
   backdrop-filter: blur(1px);
+
 }
+
 .button-container a:hover{
   background-color: var(--white);
   color: var(--black);
@@ -382,6 +404,17 @@ footer {
   border: 1px solid rgba(var(--black), 0.1);
   box-shadow: 0 0.125rem 0.25rem rgba(var(--black), 0.04);
   z-index: 4;
+
+  animation: 0.8s arrow 2s ease-in;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .link {
