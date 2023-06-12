@@ -3,52 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./Users.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="../../assets/forza-white.png" />
+    <title>Forza - Usuarios</title>
   </head>
   <body>
-    <div class="table-container">
-      <table>
-        <table cellspacing="0" cellpadding="0">
-          <tr>
-            <td rowspan="2" class="gray">Posición</td>
-            <td rowspan="2" class="gray">Pais</td>
-            <td colspan="2" class="gray">Indicadores Escolares</td>
-          </tr>
-          <tr>
-            <td class="gray">PIB (Billones USD)</td>
-            <td class="gray">Tasa de desempleo (%)</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Estados Unidos</td>
-            <td>$21.43</td>
-            <td>3.5</td>
-          </tr>
-
-          <tr>
-            <td>2</td>
-            <td>China</td>
-            <td>$15.42</td>
-            <td>3.9</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Japón</td>
-            <td>$15.5</td>
-            <td>2.2</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Alemania</td>
-            <td>$3.86</td>
-            <td>3.1</td>
-          </tr>
-          <tr>
-            <td colspan="4" align="center">INEGI AGS</td>
-          </tr>
+    <div class="main-container">
+      <div class="table-container">
+        <div class="atras">
+          <img id="back" src="../../assets/image (1).png" alt="atras" />
+        </div>
+        <table>
+          <table cellspacing="0" cellpadding="0">
+            <tr>
+              <td class="gray" style="font-weight: bold;">Usuarios</td>
+              <td class="gray" style="font-weight: bold;">Fecha de Registro</td>
+            </tr>
+            <tr>
+              <td>Jesus Garcia</td>
+              <td>22/05/23</td>
+            </tr>
+  
+            <tr>
+              <td>Lizeth Armas</td>
+              <td>22/05/23</td>
+            </tr>
+            <tr>
+              <td>Wendy Aguilera</td>
+              <td>22/05/23</td>
+            </tr>
+            <tr>
+              <td>Gabriel Martinez</td>
+              <td>22/05/23</td>
+            </tr>
+            <tr>
+              <td>Jaime Alejandro</td>
+              <td>22/05/23</td>
+            </tr>
+          </table>
         </table>
-      </table>
+      </div>
     </div>
+    <div class="loader-container">
+      <span class="loader"></span>
+    </div>
+    <script src="./Scripts.js"></script>
   </body>
 </html>

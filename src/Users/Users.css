@@ -1,24 +1,97 @@
+:root {
+  --ligth-green: #4caf50;
+  --green: #2a9235;
+  --more-green: #0a490a;
+  --yellow: #ffc107;
+  --brown: #916400;
+  --gray: #dcf1d9;
+  --more-gray: #b4c8b1;
+  --more-more-gray: #333333;
+  --litle-gray: #5c5c5c;
+
+  --white: #ffffff;
+  --primary-100: #2e4057;
+  --primary-200: #596b84;
+  --primary-300: #b7c9e5;
+  --accent-100: #f73859;
+  --accent-200: #a3a3a3;
+  --text-100: #000000;
+  --text-200: #5d5d5d;
+  --bg-100: #b7c4cf;
+  --bg-200: #adbac5;
+  --bg-300: #87949e;
+
+  --white: #ffffff;
+  --black: #000000;
+  --whitesmoke: #f5f5f5;
+  --link-blue: #2175ff;
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.06),
+    0.4px 0.6px 0.9px -0.7px hsl(var(--shadow-color) / 0.09),
+    1px 1.2px 2px -1.5px hsl(var(--shadow-color) / 0.11);
+  --shadow-elevation-medium: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.06),
+    0.9px 1.2px 1.9px -0.5px hsl(var(--shadow-color) / 0.08),
+    2.1px 2.7px 4.4px -1px hsl(var(--shadow-color) / 0.11),
+    4.8px 6.2px 10px -1.5px hsl(var(--shadow-color) / 0.13);
+  --shadow-elevation-high: 0.2px 0.3px 0.5px hsl(var(--shadow-color) / 0.07),
+    2.1px 2.7px 4.4px -0.2px hsl(var(--shadow-color) / 0.08),
+    3.9px 5px 8.1px -0.5px hsl(var(--shadow-color) / 0.09),
+    6.3px 8.1px 13.1px -0.7px hsl(var(--shadow-color) / 0.11),
+    10px 12.8px 20.7px -1px hsl(var(--shadow-color) / 0.12),
+    15.7px 20.1px 32.5px -1.2px hsl(var(--shadow-color) / 0.13),
+    23.9px 30.7px 49.6px -1.5px hsl(var(--shadow-color) / 0.14);
+}
+
 body {
   background-image: url(https://store-images.s-microsoft.com/image/apps.26697.14623499563372448.0b460acf-188b-4cc2-96a4-b6f58dfdb2ec.265e4e40-3489-4bfb-8f31-57b8673327fc?mode=scale&q=90&h=1080&w=1920&format=jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: white;
 
+  font-family: "montserrat", sans-serif;
+}
+
+.main-container {
+  height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+}
+
+.atras img {
+  z-index: 2;
+  position: absolute;
+  left: 12px;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+
+  animation: 1s back 2s ease;
+}
+@keyframes back {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.atras img:hover {
+  cursor: pointer;
 }
 
 .table-container {
-  width: 90%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background: white;
+  border-radius: 10px;
 }
 
 .tabla1 {
@@ -31,16 +104,101 @@ body {
   margin: 20px 0px 20px 0px;
 }
 table {
+  border-radius: 10px;
   padding: 15;
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--shadow-elevation-high)
 }
-table tr td{
-  border: 1px solid rgb(235, 235, 235);
+table tr td {
+  border: 3px solid rgb(255, 255, 255);
   padding: 15px;
+  border-radius: 5px;
+
+  animation: 1s table 2s ease;
+}
+table tr td:hover {
+  transform: scale(1.05);
+  transition: 0.4s;
+  cursor: pointer;
+}
+@keyframes table {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 .gray {
   background-color: rgb(184, 184, 184);
   text-align: center;
 }
 
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+  animation: loader 2s linear forwards;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation-duration: 2s;
+  animation: rotate 1s linear infinite;
+}
+.loader::before , .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #000000;
+  animation: prixClipFix 2s linear infinite ;
+}
+.loader::after{
+  border-color: #FF3D00;
+  animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0%   {transform: rotate(0deg)}
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+  0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+  25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+  50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+  100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}

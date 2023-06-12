@@ -258,6 +258,41 @@ body {
   padding: 4px;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.submit-button {
+  width: 90%;
+  height: 45px;
+  background: var(--accent-100);
+  opacity: .5;
+  border: none;
+  border-radius: 2px;
+  transition: .5s;
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+}
+.submit-button:hover {
+  cursor: pointer;
+  border: solid 2px var(--accent-100);
+  background: var(--accent-100);
+  opacity: 1;
+  border-radius: 50px;
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  transform: scale(0.85);
+}
+
 .loader-container {
   position: absolute;
   height: 100%;
@@ -325,4 +360,20 @@ body {
   50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
   75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
   100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form-container {
+    width: 90%;
+  }
+  .post-container {
+    width: 90%;
+  }
+.header-container img {
+  display: none;
+}
 }
