@@ -1,73 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./Principal.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Takamine</title>
-  </head>
-  <body>
-    <div class="page">
-      <!-- Main Content -->
-      <section class="container">
-        <nav class="navbar">
-          <div class="navbar_content">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png"
-              alt="logo"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./Principal.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../assets/forza-white.png">
+  <title>Forza</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- Main Content -->
+    <div class="container">
+      <section class="header-container">
+        <div class="logo">
+          <img src="../assets/forza-white.png" alt="logo" />
+        </div>
+        <div class="nav-container">
+          <nav class="nav">
             <ul>
-              <li><a href="">EXCLUSIVOS</a></li>
-              <li><a href="">NUEVOS</a></li>
-              <li><a href="">GIFT CARDS</a></li>
-              <li><a href="">FIND A STORE</a></li>
+              <li><a href="./Login.html">Login</a></li>
+              <li id="juegos">
+                Juegos
+                <ul id="dropdown-menu"">
+                  <li><a href="https://www.xbox.com/es-MX/games/store/forza-horizon/bs9fslk6b1rr">Forza Horizon 1</a></li>
+                  <li><a href="https://marketplace.xbox.com/es-mx/Product/Forza-Horizon-2/66acd000-77fe-1000-9115-d8024d530aa4">Forza Horizon 2</a></li>
+                  <li><a href="https://www.xbox.com/es-MX/games/store/forza-horizon-3/9nblggh1z7tw">Forza Horizon 3</a></li>
+                    <li><a href="https://www.xbox.com/es-MX/games/forza-horizon-4">Forza Horizon 4</a></li>
+                  </ul>
+                </li>
+              <li><a href="./Registro.html">Register</a></li>
+              <li>Blog</li>
+              <li id="user  ">Users</li>
             </ul>
-          </div>
-        </nav>
-
-        <section class="main-content">
-          <p>Diseña tu</p>
-          <h1>Super Héroe</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ipsam
-            fuga nam nesciunt sed ex quas ducimus aut voluptatem. Cupiditate
-            facilis commodi recusandae sequi beatae nemo quia architecto
-            deserunt ullam.
-          </p>
-        </section>
-
-        <section class="side-content">
-          <div></div>
-
-          <p>Superman</p>
-          <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="superman" />
-        </section>
-
-        <section class="footer">
-          <div id="button1">
-            <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman" />
-          </div>
-          <div id="button2">
-            <img src="https://i.ibb.co/Xzsdvgg/robin.png" alt="robin" />
-          </div>
-          <div id="button3">
-            <img src="https://i.ibb.co/M18p91c/batman.webp" alt="batman" />
-          </div>
-        </section>
-      </section>
-      <!-- Modal -->
-      <section class="modal hidden">
-        <div class="modal-container">
-          <img class="modal__content--close" src="https://cdn-icons-png.flaticon.com/128/463/463612.png" alt="cerrar">
+          </nav>
         </div>
       </section>
-      <!-- Loader -->
-      <section class="loader">
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
+
+      <div class="aside-container">
+        <section class="centered-container"><a class="link link--arrowed" href="#">
+          <svg id="open-aside" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="44" height="44"
+            viewBox="0 0 32 32">
+            <g fill="none" stroke="#000000" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+              <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+              <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+            </g>
+          </svg></a>
+        </section> 
+  
+        <aside class="aside hidden">
+          <div class="options">
+            <ul>
+              <a href="https://www.youtube.com/watch?v=FYH9n37B7Yw&ab_channel=Xbox"><img
+                src="https://i.blogs.es/6bfe40/forzahorizon5_launch_preview-04_16x9_wm/840_560.jpeg" alt=""></a>
+              <li>Trailers</li>
+              <a href="https://www.youtube.com/watch?v=EbYMkJtR8lU&ab_channel=3DJuegosLATAM"><img
+                src="https://forza.azureedge.net/strapi-uploads/assets/large_horizon_poster2_a04ae85fc2.png" alt=""></a>
+              <li>Reviews</li>
+              <a href="https://www.youtube.com/watch?v=xR40rp3Sroc&ab_channel=DarkPlayerGamingTV"><img
+                src="https://es.digitaltrends.com/wp-content/uploads/2021/11/forza-horizon-5-01.jpg?p=1" alt=""></a>
+              <li>Gameplays</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Paginas -->
+      <div class="page">
+        <section class="section-page">
+          <div class="button-container">
+            <a href="https://www.xbox.com/es-MX/games/forza-horizon-5">Conoce más..</a>
+          </div>
+          <img class="backgrund-img" src="https://i.blogs.es/37b45c/fh5/1366_2000.jpeg" alt="imagen" />
+        </section>
+      </div>
+      <div class="page" dir="ltr">
+        <section class="section-page">
+          <div id="background-info" >
+            <div class="info-container">
+              <p>Forza Horizon 5</p>
+              <h1>Vive nuevas aventuras</h1>
+              <p>Presentamos la nueva entrega de la saga de videojuegos de autos más exitosa de la historia. En este nuevo juego podras recorrer las calles de México y explorar sus hermosos paisajes de la mano de los organizadorez del Horizon Festival, que te esratán acompañando durante todas tus aventuras a lo largo del fextival. <br>
+                !Buena suerte¡ y... !A correr¡
+              </p>
+            </div>
+          </div>
+          <div class="button-container">
+            <a href="">Jugar</a>
+          </div>
+          <img
+            class="backgrund-img"
+            src="https://i.blogs.es/187fe3/forzahorizon5-1/1366_2000.jpeg"
+            alt="imagen" />
+        </section>
+      </div>
+      <div class="page" dir="ltr">
+        <section class="section-page">
+          <div class="page-container">
+            <div class="carrusel-container">
+              <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                  <div class="carrusel-elemento">
+                      <img class="imagenes" src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/ZM2UKVPQTJAAFC4BJVQELCFK3M.jpg" >
+                  </div>
+                  <div class="carrusel-elemento">   
+                    <img class="imagenes" src="https://imagenes.20minutos.es/files/og_thumbnail/uploads/imagenes/2021/11/11/forza-horizon-5.png">
+                  </div>
+                  <div class="carrusel-elemento">   
+                        <img class="imagenes" src="https://assets.xboxservices.com/assets/d6/48/d6487c09-be7d-45e0-b971-b8f9985bcd0d.jpg?n=662195_Gallery_1350x759_05.jpg">                        
+                  </div>
+              </div>
+            </div>
+              <div class="social-media">
+                <ul>
+                  <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/174/174848.png" alt="icon">
+                    <li><a href="">Facebook</a></li>
+                  </div>
+                  <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="icon">
+                    <li><a href="">Instagram</a></li>
+                  </div>
+                  <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="icon">
+                    <li><a href="">Youtube</a></li>
+                  </div>
+                  <div>
+                    <img src="https://cdn-icons-png.flaticon.com/128/174/174876.png" alt="icon">
+                    <li><a href="">Twiter</a></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <img class="backgrund-img" src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/ES-PLA-local/2023/Deporte-y-Estilo-de-Vida/Todos-los-Porsche-que-recorren-Mexico-en-Forza-Horizon-5/PLA22_1800_fine.jpg/jcr:content/PLA22_1800_fine.jpg" alt="imagen" />
+        </section>
+      </div>
+
     </div>
-  </body>
+    <!-- Loader -->
+    <div class="loader-container">
+      <span class="loader"></span>
+    </div>
+  </div>
+</body>
+<script src="./scripts.js"></script>
+
 </html>

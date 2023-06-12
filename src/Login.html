@@ -4,36 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Login.css">
-    <title>Takamine - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Login.css" />
+    <title>Forza - Login</title>
   </head>
   <body>
-    <div class="main-container">
-      <div class="header-container">
-        <h1>CAPyBARAS</h1>
-      </div>
-      <div class="form">
-        <input type="text" name="text" autocomplete="off" required />
-        <label for="text" class="label-name">
-          <span class="content-name"> Email </span>
-        </label>
-      </div>
+    <div class="login-container">
+      <div class="main-container">
+        <div class="header-container">
+          <img
+            src="../assets/Forza-Horizon-emblem-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div class="form">
+          <input type="text" name="text" autocomplete="off" required />
+          <label for="text" class="label-name">
+            <span class="content-name"> Username o Email </span>
+          </label>
+        </div>
 
-      <div class="form">
-        <input type="password" name="password" autocomplete="off" required />
-        <label for="password" class="label-name">
-          <span class="content-name"> Password </span>
-        </label>
-      </div>
-      <div class="form-down">
-        <a href="">¿Olvidaste tu contraseña?</a>
-        <a href="">Ya tengo una cuenta</a>
-      </div>
+        <div class="form">
+          <input type="password" name="password" autocomplete="off" required />
+          <label for="password" class="label-name">
+            <span class="content-name"> Password </span>
+          </label>
+        </div>
 
-      <div class="button-container form-down">
-        <button class="submit-button"><a href="./index2.html">Registrarse</a></button>
+        <div class="form-down">
+          <a href="">¿Olvidaste tu contraseña?</a>
+          <a href="./Registro.html">Crear una cuenta nueva</a>
+        </div>
+
+        <div class="button-container form-down">
+          <button class="submit-button" onclick="location.href='./Principal.html'">
+            Login
+          </button>
+        </div>
       </div>
     </div>
-
+    <div class="loader-container">
+      <span class="loader"></span>
+    </div>
   </body>
 </html>

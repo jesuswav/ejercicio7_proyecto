@@ -77,6 +77,8 @@ body {
 }
 
 .login-container {
+  position: absolute;
+  top: 3%;
   background-color: #000000;
   opacity: 0.9;
   border-radius: 10px;
@@ -89,7 +91,7 @@ body {
   justify-content: center;
 }
 .header-container img {
-  animation: 1s header-img 0.5s ease-in-out;
+  animation: 1s header-img 1.5s ease-in-out;
 }
 @keyframes header-img {
   0% {
@@ -101,7 +103,7 @@ body {
 }
 .header-container h1 {
   z-index: 1;
-  animation: 1.5s header-h1 0.5s ease-in-out;
+  animation: 1.5s header-h1 2s ease-in-out;
 }
 @keyframes header-h1 {
   0% {
@@ -113,7 +115,7 @@ body {
 }
 
 .main-container .form label {
-  animation: 1.5s container-form 0.1s ease-in-out;
+  animation: 1.5s container-form 1.5s ease-in-out;
 }
 @keyframes container-form {
   0% {
@@ -197,8 +199,8 @@ h1 {
 
 .form-down {
   animation: side-content-text;
-  animation-duration: 1s;
-  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
@@ -317,4 +319,50 @@ h1 {
     50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
     75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
     100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--more-more-gray);
+    background: rgb(233, 233, 233);
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 320px;
+    height: 800px;
+    padding: 0%;
+    background: var(--white);
+    box-shadow: var(--shadow-elevation-high);
+    border-radius: 6px;
+  }
+  
+  .main-container div {
+    margin: 10px 0 0 0;
+  }
+  .main-container img {
+    right: 35%;
+    height: 100px;
+  }
+  
+  .login-container {
+    position: absolute;
+    top: 3%;
+    background-color: #000000;
+    opacity: 0.9;
+    border-radius: 10px;
+  }
 }
