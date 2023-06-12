@@ -1,3 +1,46 @@
 body {
-  background: transparent;
+  background-image: url(https://store-images.s-microsoft.com/image/apps.26697.14623499563372448.0b460acf-188b-4cc2-96a4-b6f58dfdb2ec.265e4e40-3489-4bfb-8f31-57b8673327fc?mode=scale&q=90&h=1080&w=1920&format=jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.table-container {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla1 {
+  margin: 20px 0px 20px 0px;
+}
+.tabla2 {
+  margin: 20px 0px 20px 0px;
+}
+.tabla3 {
+  margin: 20px 0px 20px 0px;
+}
+table {
+  padding: 15;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+table tr td{
+  border: 1px solid rgb(235, 235, 235);
+  padding: 15px;
+}
+.gray {
+  background-color: rgb(184, 184, 184);
+  text-align: center;
+}
+

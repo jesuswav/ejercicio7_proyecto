@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./Principal.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet" />
-  <link rel="shortcut icon" href="../assets/forza-white.png">
+  <link rel="shortcut icon" href="../../assets/forza-white.png">
   <title>Forza</title>
 </head>
 
@@ -24,7 +25,7 @@
         <div class="nav-container">
           <nav class="nav">
             <ul>
-              <li><a href="../Login/Login.html">Login</a></li>
+              <li><a href="../Login.html">Login</a></li>
               <li id="juegos">
                 Juegos
                 <ul id="dropdown-menu"">
@@ -76,13 +77,13 @@
           <div class="button-container">
             <a href="https://www.xbox.com/es-MX/games/forza-horizon-5">Conoce más..</a>
           </div>
-          <img class="backgrund-img" src="https://i.blogs.es/37b45c/fh5/1366_2000.jpeg" alt="imagen" />
+          <img class="background-img" src="https://i.blogs.es/37b45c/fh5/1366_2000.jpeg" alt="imagen" />
         </section>
       </div>
       <div class="page" dir="ltr">
         <section class="section-page">
           <div id="background-info" >
-            <div class="info-container">
+            <div class="info-container" >
               <p>Forza Horizon 5</p>
               <h1>Vive nuevas aventuras</h1>
               <p>Presentamos la nueva entrega de la saga de videojuegos de autos más exitosa de la historia. En este nuevo juego podras recorrer las calles de México y explorar sus hermosos paisajes de la mano de los organizadorez del Horizon Festival, que te esratán acompañando durante todas tus aventuras a lo largo del fextival. <br>
@@ -94,7 +95,7 @@
             <a href="">Jugar</a>
           </div>
           <img
-            class="backgrund-img"
+            class="background-img"
             src="https://i.blogs.es/187fe3/forzahorizon5-1/1366_2000.jpeg"
             alt="imagen" />
         </section>
@@ -138,7 +139,7 @@
               </div>
             </div>
           </div>
-          <img class="backgrund-img" src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/ES-PLA-local/2023/Deporte-y-Estilo-de-Vida/Todos-los-Porsche-que-recorren-Mexico-en-Forza-Horizon-5/PLA22_1800_fine.jpg/jcr:content/PLA22_1800_fine.jpg" alt="imagen" />
+          <img class="background-img" src="https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/ES-PLA-local/2023/Deporte-y-Estilo-de-Vida/Todos-los-Porsche-que-recorren-Mexico-en-Forza-Horizon-5/PLA22_1800_fine.jpg/jcr:content/PLA22_1800_fine.jpg" alt="imagen" />
         </section>
       </div>
 
@@ -148,7 +149,12 @@
       <span class="loader"></span>
     </div>
   </div>
+  <script src="./scripts.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-<script src="./scripts.js"></script>
+
 
 </html>

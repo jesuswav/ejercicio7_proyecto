@@ -1,3 +1,4 @@
+
 const aside = document.querySelector(".aside");
 const button = document.querySelector("#open-aside");
 const icon = document.querySelector(".arrow-icon");
